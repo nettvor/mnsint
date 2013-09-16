@@ -145,7 +145,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="common\defs.h" />
-    <ClInclude Include="common\rk.h" />
     <ClInclude Include="helper\helper1amp.h" />
     <ClInclude Include="helper\helper1omp.h" />
     <ClInclude Include="helper\helper1ppl.h" />
@@ -155,6 +154,7 @@
     <ClInclude Include="service\stopwatch.h" />
     <ClInclude Include="spd\ispd.h" />
     <ClInclude Include="spd\spdchol.h" />
+    <ClInclude Include="spline\rk.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="service\stopwatch.cpp" />

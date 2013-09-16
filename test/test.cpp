@@ -13,7 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include <random>
 
 #include "../service/stopwatch.h"
-#include "../common/rk.h"
+#include "../spline/rk.h"
 #include "../spd/spdchol.h"
 #include "../helper/helper1.h"
 
