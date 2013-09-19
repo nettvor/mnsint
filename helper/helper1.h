@@ -27,6 +27,8 @@ namespace mns
 		virtual VectorT GetResidualImpl(int n, const SpdMatrixT& a, const VectorT& x, const VectorT& b) const override;
 		virtual T GetVectorNorm2Impl(int n, const VectorT& v) const override;
 
+		virtual T GetGamma2Impl(int n) const override;
+
 		Helper1(const Helper1&);
 		Helper1& operator =(const Helper1&);
 		Helper1& operator =(Helper1&&);
@@ -36,7 +38,7 @@ namespace mns
 	T Helper1<T>::GetVectorNorm2Impl(int n, const VectorT& v) const
 	{
 		T s = T(0.0);
-		s = inner_product(v.begin(), v.end(), v.begin(), s);
+		s = std::inner_product(v.begin(), v.end(), v.begin(), s);
 		return std::sqrt(s);
 	}
 
@@ -60,6 +62,16 @@ namespace mns
 		return r;
 	}
 
+    template<typename T> 
+	T Helper1<T>::GetGamma2Impl(int n) const
+	{
+		T s = T(1.0);
+		for( int i = 1; i <= n; ++i )
+		{
+			s *= ((T(2.0)*i - 1)/2.0);
+		}
+		return s*SQRTPI();
+	}
 
 } // end of mns namespace
 

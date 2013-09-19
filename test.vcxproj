@@ -148,13 +148,14 @@
     <ClInclude Include="helper\helper1amp.h" />
     <ClInclude Include="helper\helper1omp.h" />
     <ClInclude Include="helper\helper1ppl.h" />
+    <ClInclude Include="rk\irk.h" />
+    <ClInclude Include="rk\rk.h" />
     <ClInclude Include="spline\ispline.h" />
     <ClInclude Include="helper\helper1.h" />
     <ClInclude Include="helper\ihelper.h" />
     <ClInclude Include="service\stopwatch.h" />
     <ClInclude Include="spd\ispd.h" />
     <ClInclude Include="spd\spdchol.h" />
-    <ClInclude Include="spline\rk.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="service\stopwatch.cpp" />

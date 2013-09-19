@@ -13,7 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include <random>
 
 #include "../service/stopwatch.h"
-#include "../spline/rk.h"
+#include "../rk/rk.h"
 #include "../spd/spdchol.h"
 #include "../helper/helper1.h"
 
@@ -44,8 +44,12 @@ std::ostream& operator << (std::ostream& os, const mns::Status& obj)
    return os;
 }
 
+typedef Helper1<double> Helper1T;
+
 int main(int argc, char* argv[])
 {
+
+
 	cout << endl << "Hit <Return> key to exit..." << endl;
 	cin.clear();
 	cin.ignore(cin.rdbuf()->in_avail());
